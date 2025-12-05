@@ -1,16 +1,29 @@
 <!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="Assets/CSS/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link href="Assets/CSS/style.css" rel="stylesheet" type="text/css">
-    <!-- Appel d'une autre feuille de style afin de régler d'autres styles -->
-</head>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>La virtualisation</title>
+        
+        <!-- Bootstrap CSS -->
+        <link
+            href="Assets/CSS/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+        />
+        
+        <!-- Custom CSS -->
+        <link
+            href="Assets/CSS/style.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+    </head>
 
 <body>
     <header>
+        <!--Debut de la barre de navigation avec le framework Bootstrap-->
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
@@ -19,7 +32,7 @@
             </div>
 
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">InfoDev</a>
+                <a class="navbar-brand" href="Index.html">InfoDev</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -27,16 +40,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                            <a class="nav-link active" aria-current="page" href="Index.html">Accueil</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Les outils
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Les concepts</a></li>
-                                <li><a class="dropdown-item" href="#">Tutoriel de virtualisation</a></li>
-                                <li><a class="dropdown-item" href="#">Types de logiciels</a></li>
+                                <li><a class="dropdown-item" href="concepts.html">Les concepts</a></li>
+                                <li><a class="dropdown-item" href="tutoriels.html">Tutoriel de virtualisation</a></li>
+                                <li><a class="dropdown-item" href="types_logiciels.html">Types de logiciels</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -47,13 +60,22 @@
             </div>
         </nav>
     </header>
+    <!--Fin de la barre de navigation-->
 
     <main>
-        <!-- TODO: Ajouter du contenu sur la page, comme des sections, des articles, etc. -->
+       
         <h1>Bienvenue au sein d'InfoDev !</h1>
         <p>Ceci est notre ressource principale pour le domaine de la virtualisation.</p>
         <p>Des bienfaits de ces outils peuvent êtres également soulignés, on y retrouve notamment:</p>
 
+        <article>
+            <h3> C'est quoi la virtualisation même ?</h3>
+            <p> 
+                La virtualisation est un processus qui consiste à <bold>répliquer</bold> un ordinateur au sein d'un ordinateur, avec une allocation de mémoire vive,
+                d'une puissance de calcul, et d'un espace de stockage.
+                On les retrouve également au sein de grands centres de données qui regroupent un grand nombre de serveurs dédiés à leur fonctionnement. 
+            </p>
+        </article>
         <table class="table">
             <thead>
                 <tr>
@@ -62,7 +84,7 @@
                     <th scope="col">Les bénérfices de cette approche "virtuelle"</th>
                 </tr>
             </thead>
-
+            <!--TODO: Remplir les cases avec des informations correctes-->
             <tbody>
                 <tr>
                     <th scope="row">1</th>
@@ -84,6 +106,31 @@
                 </tr>
             </tbody>
         </table>
+
+        <!-- Présentation de l'équipe -->
+         <h1 class="text-center"> Présentation de l'équipe:</h1>
+        <div class="container text-center">
+            <div class="row">
+            <div class="col">
+                 <img src="#" alt="">
+                <h2 class="text-decoration-underline">Nathan C. </h2>
+                <p> Développeur, chef de projet, dirigeant back-end de chez Microsoft. </p>
+                
+            </div>
+            <div class="col">
+                <img src="Assets/image/img_M.jpg" class="rounded-2 img-fluid img_M" alt="Photo d'un camarade de classe">
+                <h2 class="text-decoration-underline"> Meelan N. </h2>
+                <p> Développeur, chef de projet, dirigeant back-end de chez Microsoft. </p>
+            </div>
+            <div class="col">
+                <img src="#" alt="">
+                <h2 class="text-decoration-underline">Axel L. </h2>
+                <p> Développeur, chef de projet, dirigeant back-end de chez Microsoft. </p>
+            </div>
+
+        </div>
+    </div>
+
     </main>
 
     <footer>
