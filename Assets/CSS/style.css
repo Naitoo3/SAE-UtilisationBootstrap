@@ -1,4 +1,9 @@
-.img_M {
+.text-center {
+    text-align: center;
+    margin-top: 100px;
+}
+
+img {
     width: 50%;
-    height:50%;
+    height: auto;
 }
