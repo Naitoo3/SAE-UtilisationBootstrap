@@ -1,38 +1,40 @@
 <!doctype html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>La virtualisation</title>
-        
-        <!-- Bootstrap CSS (local) -->
-        <link href="Assets/CSS/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        
-        <!-- Custom CSS -->
-        <link
-            href="Assets/CSS/style.css"
-            rel="stylesheet"
-            type="text/css"
-        />
-    </head>
 
-<body>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>La virtualisation</title>
+
+    <!-- Bootstrap CSS (local) -->
+    <link href="Assets/CSS/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Custom CSS -->
+    <link href="Assets/CSS/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="bg-light">
     <header>
         <!--Debut de la barre de navigation avec le framework Bootstrap-->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-light">
+        <nav class="navbar navbar-expand-xl  navbar-dark bg-danger shadow">
+
             <div class="container-fluid">
-                <a class="navbar-brand" href="Index.html">InfoDev</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand fw-bold" href="Index.html">InfoDev</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="Index.html">Accueil</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 Les outils
                             </a>
                             <ul class="dropdown-menu">
@@ -51,77 +53,121 @@
     </header>
     <!--Fin de la barre de navigation-->
 
-    <main>
-       
-        <h1>Bienvenue au sein d'InfoDev !</h1>
-        <p>Ceci est notre ressource principale pour le domaine de la virtualisation.</p>
-        <p>Des bienfaits de ces outils peuvent êtres également soulignés, on y retrouve notamment:</p>
-
-        <article>
-            <h3> C'est quoi la virtualisation même ?</h3>
-            <p> 
-                La virtualisation est un processus qui consiste à <bold>répliquer</bold> un ordinateur au sein d'un ordinateur, avec une allocation de mémoire vive,
-                d'une puissance de calcul, et d'un espace de stockage.
-                On les retrouve également au sein de grands centres de données qui regroupent un grand nombre de serveurs dédiés à leur fonctionnement. 
-            </p>
-        </article>
-        <div class="table-responsive">
-        <table class="table table-striped table-hover table align-middle">
-            <thead>
-                <tr>
-                    <th scope="col">Types d'hyperviseurs</th>
-                    <th scope="col">Logiciels de virtualisation</th>
-                    <th scope="col">Les bénérfices de cette approche "virtuelle"</th>
-                </tr>
-            </thead>
-            <!--TODO: Remplir les cases avec des informations correctes-->
-            <tbody>
-                <tr scope="row">
-                    <td>Natifs, sur système</td>
-                    <td>Hyperviseurs herbergés</td>
-                    <td>Hyperviseurs hybrides</td>
-                </tr>
-                <tr scope="row">
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr scope="row">
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>@social</td>
-                </tr>
-            </tbody>
-        </table>
-
-
-        <!-- Présentation de l'équipe -->
-         <h1 class="text-center"> Présentation de l'équipe:</h1>
-        <div class="container text-center">
-            <div class="row">
-            <div class="col">
-                 <img src="Assets/image/img_N.jpg" class="rounded-2 img-fluid" alt="Photo de Nathan C.">
-                <h2 class="text-decoration-underline">Nathan C. </h2>
-            
-                <p>
-                    Développeur principal d'une partie des sites, assez curieux et résoue l'ensemble de ses problèmes avec enthousiame !
-                    Actuellement, chef de projet sur cette SAE, et présentateur du texte que contiennent les pages web.
-                </p>
-                
-            </div>
-            <div class="col">
-                <img src="Assets/image/img_M.jpg" class="rounded-2 img-fluid" alt="Photo de Meelan N.">
-                <h2 class="text-decoration-underline"> Meelan N. </h2>
-                <p> A RENSEIGNER. </p>
-            </div>
-            <div class="col">
-                <img src="Assets/image/img_A.jpg" class="rounded-2 img-fluid" alt="Photo d'Axel L.">
-                <h2 class="text-decoration-underline">Axel L. </h2>
-                <p> A RENSEIGNER. </p>
-            </div>
-
+    <main class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="fw-bold text-decoration-underline">Bienvenue au sein d'InfoDev !</h1>
+            <p class="lead">Ceci est notre ressource principale pour le domaine de la virtualisation.</p>
+            <p> Ces outils sont utilisés dans la vie quotidienne des développeurs, administrateurs systèmes, et
+                ingénieurs réseau, et sont une partie intégrante de l'informatique moderne.</p>
         </div>
+        <div>
+            <article>
+                <h3 class="fw-semibold"> Une définition de la virtualisation :</h3>
+                <p>
+                    La virtualisation est un processus qui consiste à <bold>répliquer</bold> un ordinateur au sein d'un
+                    ordinateur, avec une allocation de mémoire vive,
+                    d'une puissance de calcul, et d'un espace de stockage.
+                    On les retrouve également au sein de grands centres de données qui regroupent un grand nombre de
+                    serveurs dédiés à leur fonctionnement. Ce sont des Datacenters
+                    qui hébergent des services en ligne, des applications web, et des plateformes cloud. Le tableau
+                    ci-dessous présente les différents types d'hyperviseurs, les logiciels de virtualisation associés,
+                    ainsi que les bénéfices de cette approche "virtuelle".
+                </p>
+            </article>
+        </div>
+        <br>
+
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table align-middle">
+                <thead class="table-dark table-hover">
+                    <tr>
+                        <th scope="col">Types d'hyperviseurs</th>
+                        <th scope="col">Logiciels de virtualisation</th>
+                        <th scope="col">Les bénérfices de cette approche "virtuelle"</th>
+                        <th scope="col">Des exemples d'utilisation de ces approches</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Hyperviseurs natifs (ou de type 1)</th>
+                        <td>Fonctionnent directement sur le matériel physique, sans système d'exploitation
+                            intermédiaire.</td>
+                        <td>Offrent les meilleures performances et une isolation très élevée entre les machines
+                            virtuelles.</td>
+                        <td>Idéal pour les serveurs et les environnements professionnels : exemples courants → VMware
+                            ESXi, Microsoft Hyper-V Server, Xen.</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Hyperviseurs hébergés (ou de type 2)</th>
+                        <td>Installés au-dessus d'un système d'exploitation classique (Windows, Linux, macOS).</td>
+                        <td>Les performances sont très proches du réel, mais légèrement inférieures à celles des
+                            hyperviseurs natifs.</td>
+                        <td>Utilisent les ressources matérielles via l'OS hôte ; exemples : VirtualBox, VMware
+                            Workstation, Parallels Desktop.</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Hyperviseurs hybrides, des types 1 et 2.</th>
+                        <td>Combinaison des approches type 1 et type 2 : une partie tourne directement sur le matériel,
+                            le reste s’appuie sur un OS.</td>
+                        <td>Permettent plus de flexibilité tout en gardant de bonnes performances.</td>
+                        <td>Souvent utilisés dans des environnements cloud ou mobiles ; exemple : KVM sous Linux,
+                            considéré comme un hyperviseur hybride.</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+
+<!-- Présentation de l'équipe -->
+<h1 class="text-center"> Présentation de l'équipe:</h1>
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center align-items-stretch">
+
+        <!-- Nathan -->
+        <div class="col d-flex">
+            <div class="card h-100 mx-auto text-center">
+                <div class="ratio ratio-4x3">
+                    <img src="Assets/image/img_N.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Photo de Nathan C.">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Nathan C.</h5>
+                    <p class="card-text">Développeur principal d'une partie des sites, curieux et résout les problèmes avec enthousiasme. Actuellement chef de projet sur cette SAE.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Meelan -->
+        <div class="col d-flex">
+            <div class="card h-100 mx-auto text-center">
+                <div class="ratio ratio-4x3">
+                    <img src="Assets/image/img_M.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Photo de Meelan N.">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Meelan N.</h5>
+                    <p class="card-text">Développeur — informations à renseigner.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Axel -->
+        <div class="col d-flex">
+            <div class="card h-100 mx-auto text-center">
+                <div class="ratio ratio-4x3">
+                    <img src="Assets/image/img_A.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Photo d'Axel L.">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Axel L.</h5>
+                    <p class="card-text">Développeur — informations à renseigner.</p>
+                </div>
+            </div>
+        </div>
+
     </div>
+</div>
+
 
     </main>
 
@@ -131,7 +177,10 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 
-    </body>
+</body>
+
 </html>
