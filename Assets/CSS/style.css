@@ -1,3 +1,6 @@
+/* Styles de la page principale */
+
+
 table {
     margin-top: 100px;
 }
@@ -10,6 +13,8 @@ table {
 }
 
 /* Customisation des éléments card de Bootstrap pour ajouter un effet de survol */
+
+
 
 .card:hover {
     transform: scale(1.05);
