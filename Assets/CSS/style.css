@@ -21,3 +21,13 @@ table {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s, box-shadow 0.3s;
 }
+
+/* Styles pour la page de tutoriel */
+
+.Partie1_img1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+    height: auto;
+}
