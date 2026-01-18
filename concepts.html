@@ -3,17 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Concepts de Virtualisation - InfoDev</title>
     <link href="Assets/CSS/bootstrap.min.css" rel="stylesheet">
     <link href="Assets/CSS/style.css" rel="stylesheet" type="text/css">
-    <!-- Appel d'une autre feuille de style afin de régler d'autres styles -->
 </head>
 
 <body class="bg-light">
     <header>
-        <!--Debut de la barre de navigation avec le framework Bootstrap-->
-        <nav class="navbar navbar-expand-xl  navbar-dark bg-danger shadow">
-
+        <nav class="navbar navbar-expand-xl navbar-dark bg-danger shadow">
             <div class="container-fluid">
                 <a class="navbar-brand fw-bold" href="Index.html">InfoDev</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -24,7 +21,6 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="Index.html">Accueil</a>
                         </li>
@@ -48,14 +44,83 @@
         </nav>
     </header>
 
-    <main>
-        <!-- Contenu du main : Carousel de cartes qui présentent les concepts de la virtualisation-->
+    <main class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="fw-bold mb-3">Les Concepts Clés</h1>
+            <p class="lead text-muted">Comprendre les piliers fondamentaux qui rendent la virtualisation possible.</p>
+        </div>
 
+        <div id="carouselConcepts" class="carousel slide carousel-dark shadow-lg rounded-4 overflow-hidden" data-bs-ride="carousel">
+            
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselConcepts" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselConcepts" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselConcepts" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner bg-white">
+                
+                <div class="carousel-item active" data-bs-interval="5000">
+                    <div class="d-flex align-items-center justify-content-center" style="min-height: 400px;">
+                        <div class="container p-5 text-center">
+                            <div class="mb-4 text-danger">
+                                 <img src="Assets/image/parti.png" alt="Icône PDF" class="img-fluid" style="width: 80px; height: 80px;">
+                            </div>
+                            <h2 class="fw-bold display-6">Le Partitionnement</h2>
+                            <p class="lead mx-auto" style="max-width: 700px;">
+                                La capacité à diviser les ressources d'un serveur physique unique (CPU, RAM, Disque) 
+                                pour exécuter plusieurs machines virtuelles simultanément. Chaque VM pense avoir le matériel pour elle seule.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="5000">
+                    <div class="d-flex align-items-center justify-content-center" style="min-height: 400px;">
+                        <div class="container p-5 text-center">
+                            <div class="mb-4 text-danger">
+                                    <img src="Assets/image/iso.png" alt="Icône PDF" class="img-fluid" style="width: 300px; height: 300px;">
+                            </div>
+                            <h2 class="fw-bold display-6">L'Isolation</h2>
+                            <p class="lead mx-auto" style="max-width: 700px;">
+                                Chaque machine virtuelle est isolée des autres. Si une VM plante ou est attaquée par un virus, 
+                                les autres machines et l'hôte physique ne sont pas affectés. C'est un gage de sécurité majeur.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="5000">
+                    <div class="d-flex align-items-center justify-content-center" style="min-height: 400px;">
+                        <div class="container p-5 text-center">
+                            <div class="mb-4 text-danger">
+                                    <img src="Assets/image/box.png" alt="Icône PDF" class="img-fluid" style="width: 110px; height: 110px;">
+                            </div>
+                            <h2 class="fw-bold display-6">L'Encapsulation</h2>
+                            <p class="lead mx-auto" style="max-width: 700px;">
+                                Une machine virtuelle complète (OS, applications, données) peut être enregistrée dans un simple fichier. 
+                                Cela permet de la copier, de la déplacer ou de la sauvegarder aussi facilement qu'un document texte.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselConcepts" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Précédent</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselConcepts" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Suivant</span>
+            </button>
+        </div>
         
     </main>
 
     <footer>
-        <div class="footer-content">
+        <div class="footer-content text-center py-4">
             <p>2024 InfoDev. Tous droits réservés.</p>
         </div>
     </footer>
