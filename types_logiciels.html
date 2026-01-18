@@ -3,17 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Types de Logiciels - InfoDev</title>
     <link href="Assets/CSS/bootstrap.min.css" rel="stylesheet">
     <link href="Assets/CSS/style.css" rel="stylesheet" type="text/css">
-    <!-- Appel d'une autre feuille de style afin de régler d'autres styles -->
 </head>
 
-<body>
+<body class="bg-light">
     <header>
-        <!--Debut de la barre de navigation avec le framework Bootstrap-->
-        <nav class="navbar navbar-expand-xl  navbar-dark bg-danger shadow">
-
+        <nav class="navbar navbar-expand-xl navbar-dark bg-danger shadow">
             <div class="container-fluid">
                 <a class="navbar-brand fw-bold" href="Index.html">InfoDev</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -24,7 +21,6 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="Index.html">Accueil</a>
                         </li>
@@ -48,46 +44,84 @@
         </nav>
     </header>
 
-    <main>
-        <!-- TODO: Ajouter du contenu sur la page, comme des sections, des articles, etc. -->
-        <h1>Bienvenue au sein d'InfoDev !</h1>
-        <p>Ceci est notre ressource principale pour le domaine de la virtualisation.</p>
-        <p>Des bienfaits de ces outils peuvent êtres également soulignés, on y retrouve notamment:</p>
+    <main class="container py-5">
+        
+        <div class="text-center mb-5">
+            <h1 class="fw-bold mb-3">Panorama des Solutions</h1>
+            <p class="lead text-muted">Il existe plusieurs approches pour virtualiser un système. <br>Voici les distinctions fondamentales entre les solutions du marché.</p>
+        </div>
 
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Types d'hyperviseurs</th>
-                    <th scope="col">Logiciels de virtualisation</th>
-                    <th scope="col">Les bénérfices de cette approche "virtuelle"</th>
-                </tr>
-            </thead>
+        <div class="row g-4 mb-5">
+            
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm text-center p-4">
+                    <div class="card-body d-flex flex-column justify-content-center">
+                        <h4 class="card-title">Hyperviseur Type 1</h4>
+                        <h6 class="text-muted mb-3">"Bare Metal"</h6>
+                        <p class="card-text small">S'installe directement sur le matériel physique. C'est la solution privilégiée des Data Centers pour sa performance brute.</p>
+                    </div>
+                </div>
+            </div>
 
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>@social</td>
-                </tr>
-            </tbody>
-        </table>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm text-center p-4">
+                    <div class="card-body d-flex flex-column justify-content-center">
+                        <h4 class="card-title">Hyperviseur Type 2</h4>
+                        <h6 class="text-muted mb-3">"Hosted"</h6>
+                        <p class="card-text small">S'installe comme un logiciel sur votre OS (Windows/Mac). Idéal pour le développement et les tests locaux.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm text-center p-4">
+                    <div class="card-body d-flex flex-column justify-content-center">
+                        <h4 class="card-title">Conteneurisation</h4>
+                        <h6 class="text-muted mb-3">"Micro-services"</h6>
+                        <p class="card-text small">Plus léger que la virtualisation classique. Partage le noyau de l'OS hôte (ex: Docker). Très prisé des développeurs web.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="fw-bold mb-4" style="color: var(--primary-red);">Comparatif Technique</h3>
+        <div class="table-responsive shadow rounded">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col" class="py-3 ps-4">Type</th>
+                        <th scope="col" class="py-3">Performance</th>
+                        <th scope="col" class="py-3">Usage Recommandé</th>
+                        <th scope="col" class="py-3 pe-4">Exemples</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white">
+                    <tr>
+                        <th scope="row" class="ps-4 fw-bold text-danger">Type 1 (Natif)</th>
+                        <td><span class="badge bg-success">Excellente</span></td>
+                        <td>Serveurs d'entreprise, Cloud</td>
+                        <td class="pe-4">ESXi, Hyper-V Server, Xen</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="ps-4 fw-bold text-danger">Type 2 (Hébergé)</th>
+                        <td><span class="badge bg-warning text-dark">Moyenne</span></td>
+                        <td>Poste de travail, Tests</td>
+                        <td class="pe-4">VirtualBox, VMWare Workstation</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="ps-4 fw-bold text-danger">Conteneur</th>
+                        <td><span class="badge bg-success">Très élevée</span></td>
+                        <td>Déploiement d'applis Web</td>
+                        <td class="pe-4">Docker, Kubernetes</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
     </main>
 
     <footer>
-        <div class="footer-content">
+        <div class="footer-content text-center py-4">
             <p>2024 InfoDev. Tous droits réservés.</p>
         </div>
     </footer>
