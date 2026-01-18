@@ -1,33 +1,221 @@
-/* Styles de la page principale */
+/* =========================================
+   1. IMPORTS & VARIABLES
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap');
 
-
-table {
-    margin-top: 100px;
+:root {
+    --primary-red: #b02a37;   
+    --primary-red-hover: #8a1f29;
+    --dark-black: #1a1a1a;
+    --charcoal: #2c3e50;
+    --light-bg: #f8f9fa;
+    --text-color: #333;
+    --transition-speed: 0.3s;
 }
 
+/* =========================================
+   2. GLOBAL STYLES
+   ========================================= */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+    overflow-x: hidden;
+}
 
+h1, h2, h3, h4, h5, .navbar-brand {
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    min-height: 80vh; /* Assure que le footer reste en bas sur les petites pages */
+}
 
 .text-center {
-    text-align: center;
-    margin-top: 100px;
+    margin-top: 0; 
 }
 
-/* Customisation des éléments card de Bootstrap pour ajouter un effet de survol */
+/* =========================================
+   3. NAVIGATION (NAVBAR)
+   ========================================= */
+.navbar {
+    /* Dégradé subtil rouge vers rouge sombre */
+    background: linear-gradient(135deg, var(--primary-red) 0%, #8b0000 100%) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
 
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
 
+.nav-link {
+    font-weight: 500;
+    transition: color var(--transition-speed) ease;
+    position: relative;
+}
+
+/* Animation de soulignement au survol */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 5px;
+    left: 0;
+    background-color: white;
+    transition: width var(--transition-speed) ease;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+/* Menu déroulant */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-top: 3px solid var(--primary-red);
+}
+
+.dropdown-item:active, .dropdown-item.active {
+    background-color: var(--primary-red);
+}
+
+/* =========================================
+   4. CARTES (CARDS) & PRESENTATION EQUIPE
+   ========================================= */
+.card {
+    border: none;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    overflow: hidden;
+}
 
 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Styles pour la page de tutoriel */
+.card-title {
+    color: var(--primary-red);
+    font-weight: 700;
+}
 
+.card img {
+    transition: transform 0.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1); /* Zoom léger sur l'image */
+}
+
+/* =========================================
+   5. TABLEAUX (TABLES)
+   ========================================= */
+table {
+    margin-top: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.table-dark {
+    background-color: var(--dark-black) !important;
+    border-color: var(--dark-black);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: rgba(176, 42, 55, 0.05);
+}
+
+.table-hover > tbody > tr:hover > * {
+    background-color: rgba(176, 42, 55, 0.1);
+    color: var(--dark-black);
+}
+
+/* =========================================
+   6. ZONE DE TELECHARGEMENT (Outils.html)
+   ========================================= */
+.download-section {
+    background: white;
+    border-left: 5px solid var(--primary-red);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.download-section:hover {
+    transform: translateX(5px);
+}
+
+.icon-box {
+    font-size: 3rem;
+    color: var(--primary-red);
+    margin-bottom: 1rem;
+}
+
+.btn-custom-red {
+    background-color: var(--primary-red);
+    color: white;
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: 2px solid var(--primary-red);
+}
+
+.btn-custom-red:hover {
+    background-color: transparent;
+    color: var(--primary-red);
+    box-shadow: 0 4px 10px rgba(176, 42, 55, 0.3);
+}
+
+.btn-outline-dark {
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+}
+
+/* =========================================
+   7. FOOTER
+   ========================================= */
+footer {
+    background-color: var(--dark-black);
+    color: white;
+    padding: 2rem 0;
+    margin-top: 4rem;
+    text-align: center;
+    border-top: 4px solid var(--primary-red);
+}
+
+footer p {
+    margin-bottom: 0;
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   8. MEDIA & UTILITAIRES
+   ========================================= */
 .Partie1_img1 {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 50%;
+    width: 100%;
+    max-width: 50%;
     height: auto;
+}
+
+@media (max-width: 768px) {
+    .Partie1_img1 {
+        max-width: 100%;
+    }
+    
+    .card {
+        margin-bottom: 1.5rem;
+    }
 }
