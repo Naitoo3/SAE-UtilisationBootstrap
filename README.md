@@ -8,6 +8,7 @@
   ├─ Assets
 	├── CSS (Contient le CSS Bootstrap et notre feuille personnalisée)
 	├── Images (Contient l’ensemble des images du site)
+	├── Doc (Contient le rapport de la SAÉ téléchargeable dans outils.html)
 	├── Index.html
 	├── concepts.html
 	├── outils.html
@@ -20,7 +21,7 @@ Par la suite, Lancez le "index.html", et normalement, tout devrait fonctionner.
 ## Equipe/Contribution :
 Nathan C. Rédacteur du rapport, concepteur du site.
 Axel L. Concepteur du site.
-Meelan N. Concepteur du site.
+Meelan N. Concepteur du site, designer CSS.
 
 ## Langages utilisés :
 HTML, CSS, utilisation d'un framework CSS (Bootstrap).
