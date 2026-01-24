@@ -1,4 +1,4 @@
-# SAE sur l'utilisation du framework Bootstrap
+# SAE sur l'utilisation du framework Bootstrap:
 
 ## A propos :
   Cette Situation d'apprentissage et d'évaluation met en avant l'utilisation de Bootstrap afin de créer un site WEB responsive, s'adaptant à chaque type d'écran.
